@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="source/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="source/css/game.css">
+    <title>Catching Angry Birds</title>
+</head>
+<body>
+    <div class="fruit_all">
+        <div class="fruit_all_body">
+            <div class="full_content">
+                <div class="fruits">
+                    <img class="sin_fruit" id="fruitId1" src="source/img/ab1.png" alt="">
+                    <img class="sin_fruit" id="fruitId2" src="source/img/ab2.png" alt="">
+                    <img class="sin_fruit" id="fruitId3" src="source/img/ab3.png" alt="">
+                    <img class="sin_fruit" id="fruitId4" src="source/img/ab4.png" alt="">
+                </div>
+                <div class="score">
+                    <div class="score_text">SCORE: <span id="scoreId">0</span></div>
+                    <div class="life_text">LIFE: <span id="lifeId">0</span></div>
+                </div>
+            </div>
+
+            <div class="footer_all">
+                <div class="footer_content" id="footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game_over">
+        <div class="game_over_all">
+            <div class="opacity_back" id="opacity_back">
+
+            </div>
+            <div class="game_over_content">
+                <div class="user_info">
+                    <div class="user_img">
+                        <img id="user_imgID" src="" alt="">
+                    </div>
+                    <div class="user_name">
+                        <div id="user_nameID"></div>
+                        <div id="best_score_id"></div>
+                    </div>
+                </div>
+
+                <div class="game_over_local_content">
+                    <div class="game_over_score1">
+                        Game Over
+                    </div>
+                    <div class="game_over_score"></div>
+                    <div class="restard_button">
+                        <button class="game_over_btn" onclick="restard();">Restard</button>
+                    </div>
+                    <br>
+                    <div class="coutinue_button">
+                        <button class="game_over_btn" onclick="shareClick();">Share Score</button>
+                    </div>
+                    <br>
+                    <div class="coutinue_button">
+                        <button class="game_over_btn" onclick="FBChoose();">Play with friend</button>
+                    </div>
+                </div>
+
+                <div class="game_play_content">
+                    <div class="game_over_score1">
+                        Catching Angry Birds
+                    </div>
+                    <br>
+                    <div class="restard_button">
+                        <button class="game_over_btn" onclick="restard();">PLay Singed</button>
+                    </div>
+                    <br>
+                    <div class="countnue_button">
+                        <button class="game_over_btn" onclick="FBChoose();">PLay with friend</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    
+    <script src="https://connect.facebook.net/en_US/fbinstant.6.2.js"></script>
+    <script src="source/js/jquery.js"></script>
+    <script src="source/js/game.js"></script>
+    <!-- <script src="source/js/bootstrap.min.js"></script> -->
+    
+</body>
+</html>
