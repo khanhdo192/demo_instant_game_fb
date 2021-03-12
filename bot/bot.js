@@ -1,5 +1,6 @@
 var request = require('request');
 
+// Messenger code
 var access_token = 'EAAEOf4tX4KIBANbjNcWlpiFnNPh7z4K7tnNopxMM0LZCjEJYItBlbRDXpJZBKPlpSlLSupcwhRmRc4wn1HfqRFSyo9xdZBbGHAow1rFF7t5wKy4m1oqs34kxRsEFHCmQqIQRabPbrwVZAtpGr6TPHSOuVQgBbktbB0KjKM08xQZDZD';
 
 module.exports = function(app) {
@@ -72,7 +73,9 @@ module.exports = function(app) {
 
             var scoutScore = payload['scoutScore'];
 
-            sendMessage(senderId, null, 'Bạn đã ghi được '+scoutScore+' điểm', "Play again!", null,'https://scontent.fhph1-2.fna.fbcdn.net/v/t39.2081-0/133329746_438003074079559_4317604837358237349_n.png?_nc_cat=103&ccb=3&_nc_sid=b12fbb&_nc_ohc=jJvd_c_GRp0AX8cz6eS&_nc_ht=scontent.fhph1-2.fna&oh=065f979283eb47cbb44a13f7c8e9c1cc&oe=60655AEC');
+            var scoutImg = payload['scoutImg'];
+
+            sendMessage(senderId, null, 'Bạn đã ghi được '+scoutScore+' điểm', "Play again!", null,scoutImg);
 
         }
         // Check for payload

@@ -19,7 +19,9 @@
                 </div>
                 <div class="score">
                     <div class="score_text">SCORE: <span id="scoreId">0</span></div>
+                    
                     <div class="life_text">LIFE: <span id="lifeId">0</span></div>
+                    
                 </div>
             </div>
 
@@ -44,6 +46,7 @@
                     <div class="user_name">
                         <div id="user_nameID"></div>
                         <div id="best_score_id"></div>
+                        <input type="hidden" name="best_score" id="best_score" value="">
                     </div>
                 </div>
 
@@ -52,8 +55,9 @@
                         Game Over
                     </div>
                     <div class="game_over_score"></div>
-                    <div class="restard_button">
-                        <button class="game_over_btn" onclick="restard();">Restard</button>
+                    <input type="hidden" name="score" id="curr_score" value="">
+                    <div class="restart_button">
+                        <button class="game_over_btn" onclick="restart();">Restart</button>
                     </div>
                     <br>
                     <div class="coutinue_button">
@@ -70,8 +74,8 @@
                         Catching Angry Birds
                     </div>
                     <br>
-                    <div class="restard_button">
-                        <button class="game_over_btn" onclick="restard();">PLay Singed</button>
+                    <div class="restart_button">
+                        <button class="game_over_btn" onclick="restart();">PLay Singed</button>
                     </div>
                     <br>
                     <div class="countnue_button">

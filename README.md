@@ -1,1 +1,1 @@
-# Test_Instant_Game
+# Demo_InstantGame_Bot
