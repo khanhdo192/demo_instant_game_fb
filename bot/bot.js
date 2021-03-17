@@ -75,7 +75,7 @@ module.exports = function(app) {
 
             var scoutImg = payload['scoutImg'];
 
-            sendMessage(senderId, null, 'Bạn đã ghi được '+scoutScore+' điểm', "Play again!", null,scoutImg);
+            sendMessage(senderId, null, 'Bạn đã ghi được '+scoutScore+' điểm ! Dùng QR code để đổi quà tại ... !', "Play again!", null,scoutImg);
 
         }
         // Check for payload

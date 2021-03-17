@@ -354,7 +354,7 @@ FBInstant.initializeAsync().then(function(){
             dataType:"json",
             data:{userName:user_name, userAva:user_ava, userScore:user_score, userBest:user_best},
           }).done(function(){
-            
+            //
           });
         }
         saveData();
