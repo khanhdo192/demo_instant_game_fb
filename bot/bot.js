@@ -76,7 +76,7 @@ module.exports = function(app) {
             var scoutImg = payload['scoutImg'];
 
             sendMessage(senderId, null, 'Bạn đã ghi được '+scoutScore+' điểm ! Dùng QR code để đổi quà tại ... !', "Play again!", null,scoutImg);
-
+            sendMessage2(senderId, null, 'Xem hướng dẫn nhận quà !', "Hướng dẫn", null);
         }
         // Check for payload
         // if (event.game_play.payload) {
@@ -93,6 +93,7 @@ module.exports = function(app) {
         // }
     }
 
+    
     //
     // Send bot message
     //
@@ -102,6 +103,45 @@ module.exports = function(app) {
     // cta (string): Button text
     // payload (object): Custom data that will be sent to game session
     // 
+    function sendMessage2(player, context, message, cta, payload) {
+        var button = {
+            type: "web_url",
+            url: "https://www.facebook.com/TestGame-102806088526074",
+            title: cta
+        };
+
+        if (context) {
+            button.context = context;
+        }
+        if (payload) {
+            button.payload = JSON.stringify(payload)
+        }
+        var messageData = {
+            recipient: {
+                id: player
+            },
+            message: {
+                attachment: {
+                    type: "template",
+                    payload: {
+                        template_type: "generic",
+                        elements: [
+                        {
+                            title: message,
+                            buttons: [button]
+                        }
+                        ]
+                    }
+                }
+            }
+        };
+
+        callSendAPI(messageData);
+
+    }
+
+
+
     function sendMessage(player, context, message, cta, payload, imageUrl) {
         var button = {
             type: "game_play",
